@@ -1,13 +1,8 @@
-#!/usr/bin/env node
-
-import minimist from "minimist";
-
 const today = new Date();
 const thisYear = today.getFullYear();
 const thisMonth = today.getMonth();
-const option = minimist(process.argv.slice(2));
-const year = option["y"] ? option["y"] : thisYear;
-const month = option["m"] ? option["m"] : thisMonth + 1;
+const year = thisYear;
+const month = thisMonth + 1;
 
 const startDate = new Date(year, month - 1, 1);
 const endDate = new Date(year, month, 0);
